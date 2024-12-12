@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar system</title>
+    <!-- <link rel="stylesheet" href="./css_animation.css"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .solar_system {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #1c2541;
+      }
+      .sun {
+        width: 100px;
+        height: 100px;
+        background-color: #ffd100;
+        border-radius: 50%;
+        position: relative;
+      }
+      .sun_border {
+        width: 120px;
+        height: 120px;
+        background-color: rgba(255, 209, 0, 0.1);
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+      }
+      .mercury {
+        width: 180px;
+        height: 180px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: mercury 3s linear infinite;
+      }
+      .planet_1 {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #c9a227;
+        top: 30px;
+        left: 10px;
+      }
+      @keyframes mercury {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .venus {
+        width: 230px;
+        height: 230px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: venus 5s linear infinite;
+      }
+      .planet_2 {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #ff9b85;
+        top: 90px;
+        left: -8px;
+      }
+      @keyframes venus {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .earth {
+        width: 280px;
+        height: 280px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: earth 10s linear infinite;
+      }
+      .planet_3 {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #0496ff;
+        left: 100px;
+        top: -10px;
+      }
+      .moon_way {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 50px;
+        top: -5px;
+        left: -5px;
+        animation: moon_way 2s linear infinite;
+      }
+      .moon {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        background-color: gray;
+        top: 5px;
+        left: -5px;
+      }
+      @keyframes moon_way {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      @keyframes earth {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .mars {
+        width: 350px;
+        height: 350px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: mars 15s linear infinite;
+      }
+      .planet_4 {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #db3a34;
+        top: 200px;
+        left: -5px;
+      }
+      @keyframes mars {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .jupiter {
+        width: 420px;
+        height: 420px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: jupiter 35s linear infinite;
+      }
+      .planet_5 {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ff9100;
+        width: 35px;
+        height: 35px;
+        top: 100px;
+        left: 5px;
+      }
+      @keyframes jupiter {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .saturn {
+        width: 550px;
+        height: 550px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: saturn 40s linear infinite;
+      }
+      .planet_6 {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgb(141, 110, 63);
+        top: 100px;
+        left: 25px;
+      }
+      .saturn_border {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid rgb(151, 128, 92);
+        top: -15px;
+        left: -15px;
+      }
+      .saturn_border_2 {
+        position: absolute;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        border: 3px solid rgb(141, 110, 63);
+        top: -14px;
+        left: -14px;
+      }
+      @keyframes saturn {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .uranus {
+        width: 650px;
+        height: 650px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: uranus 50s linear infinite;
+      }
+      .planet_7 {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #0c588f;
+        left: 250px;
+        top: -6px;
+      }
+      @keyframes uranus {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .neptune {
+        width: 710px;
+        height: 710px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        animation: neptune 55s linear infinite;
+      }
+      .planet_8 {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: #08426b;
+        left: 280px;
+        top: -6px;
+      }
+      @keyframes neptune {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solar_system">
+      <div class="sun">
+        <div class="sun_border"></div>
+      </div>
+      <div class="mercury">
+        <div class="planet_1"></div>
+      </div>
+      <div class="venus">
+        <div class="planet_2"></div>
+      </div>
+      <div class="earth">
+        <div class="planet_3">
+          <div class="moon_way">
+            <div class="moon"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mars">
+        <div class="planet_4"></div>
+      </div>
+      <div class="jupiter">
+        <div class="planet_5"></div>
+      </div>
+      <div class="saturn">
+        <div class="planet_6">
+          <div class="saturn_border">
+            <div class="saturn_border_2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="uranus">
+        <div class="planet_7"></div>
+      </div>
+      <div class="neptune">
+        <div class="planet_8"></div>
+      </div>
+    </div>
+  </body>
+</html>
